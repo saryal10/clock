@@ -1,0 +1,387 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Keeping Arial for consistency, but 'Inter' or 'Roboto' are good alternatives */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6; /* Soft light gray background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Main Application Container */
+.app-container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: #ffffff; /* Clean white background for the app */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* More prominent, softer shadow */
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px; /* Increased spacing */
+    color: #007bff; /* Primary blue color */
+    font-size: 2.2em; /* Slightly larger for impact */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Subtle text shadow */
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px; /* Increased spacing */
+    border-bottom: 2px solid #ddd; /* Lighter border for tabs */
+}
+
+.nav-tab-button {
+    background-color: #e9ecef; /* Default tab background */
+    color: #555;
+    padding: 14px 22px; /* More padding */
+    border: none;
+    border-radius: 10px 10px 0 0; /* Rounded top corners only */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    text-align: center;
+    margin: 0 3px; /* Slightly more margin between tabs */
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+    border-bottom: 2px solid transparent; /* Transparent border for active indicator */
+    position: relative; /* For the active indicator line */
+    top: 2px; /* Adjust position slightly to align with border-bottom */
+}
+
+.nav-tab-button:hover {
+    background-color: #d6d9dc;
+    color: #333;
+}
+
+.nav-tab-button.active {
+    background-color: #007bff; /* Active tab background */
+    color: white;
+    border-bottom: 2px solid #007bff; /* Active indicator line */
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15); /* More prominent shadow for active tab */
+    z-index: 1; /* Ensure active tab is on top */
+    top: 0; /* Reset position for active tab */
+}
+
+/* Content Sections */
+.tab-content-section {
+    width: 100%;
+    padding: 20px 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tab-content-section.active {
+    display: flex; /* Show active section */
+}
+
+/* Display for Time/Stopwatch/Timer */
+.display-time {
+    font-family: 'Courier New', monospace; /* Digital font */
+    font-size: 4em; /* Larger time display */
+    font-weight: bold;
+    color: #333;
+    margin: 25px 0; /* Increased spacing */
+    padding: 15px 25px; /* Increased horizontal padding */
+    background-color: #e9eff3; /* Softer background for display */
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.15); /* More defined inset shadow */
+    width: 100%;
+    max-width: 480px; /* Slightly wider display */
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 2px; /* Add some spacing for digital look */
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+/* Buttons Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* More space between buttons */
+    margin-top: 25px;
+    width: 100%;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.control-button {
+    padding: 14px 30px; /* More padding for larger buttons */
+    border: none;
+    border-radius: 8px; /* Consistent rounded corners */
+    font-size: 1.15em; /* Slightly larger font */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    min-width: 130px; /* Ensure buttons have a minimum width */
+    flex-grow: 1;
+    max-width: 200px; /* Limit max width for larger screens */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Standard button shadow */
+}
+
+.control-button:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* More prominent shadow on hover */
+}
+
+.control-button.start {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: 1px solid #218838; /* Darker border */
+}
+.control-button.start:hover {
+    background-color: #218838;
+}
+
+.control-button.pause {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+    border: 1px solid #e0a800; /* Darker border */
+}
+.control-button.pause:hover {
+    background-color: #e0a800;
+}
+
+.control-button.reset {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: 1px solid #c82333; /* Darker border */
+}
+.control-button.reset:hover {
+    background-color: #c82333;
+}
+
+.control-button.lap {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: 1px solid #0056b3; /* Darker border */
+}
+.control-button.lap:hover {
+    background-color: #0056b3;
+}
+
+/* Timer Input Styles */
+.timer-inputs {
+    display: flex;
+    gap: 15px; /* More space between inputs */
+    margin-bottom: 25px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timer-inputs label {
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap;
+    font-size: 1.05em;
+}
+
+.timer-inputs input[type="number"] {
+    width: 90px; /* Slightly wider inputs */
+    padding: 10px; /* More padding */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Consistent rounded corners */
+    font-size: 1.1em;
+    text-align: center;
+    -moz-appearance: textfield;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); /* Subtle inset shadow */
+}
+/* Hide arrows for Chrome, Safari, Edge */
+.timer-inputs input::-webkit-outer-spin-button,
+.timer-inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Stopwatch Lap List */
+#lapList {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px; /* More spacing */
+    width: 100%;
+    max-height: 250px; /* Taller list */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.05); /* Subtle inset shadow */
+}
+
+#lapList li {
+    padding: 12px 20px; /* More padding */
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+#lapList li:nth-child(odd) {
+    background-color: #f9f9f9; /* Subtle alternate row color */
+}
+
+#lapList li:hover {
+    background-color: #eef2f5; /* Highlight on hover */
+}
+
+#lapList li:last-child {
+    border-bottom: none;
+}
+
+#lapList li span:first-child {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.05em;
+}
+
+#lapList li span:last-child {
+    font-family: 'Courier New', monospace;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* World Clock Specific Styles */
+.world-clock-display {
+    font-size: 3.2em; /* Adjusted for better balance */
+    font-weight: bold;
+    color: #333;
+    margin: 25px 0 15px; /* Adjusted margins */
+    padding: 15px 25px; /* Increased horizontal padding */
+    background-color: #e9eff3;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 480px; /* Slightly wider display */
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.world-clock-location {
+    font-size: 1.3em; /* Slightly larger */
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Footer specific styles */
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: 0.85em;
+    color: #777;
+    background-color: #e9ecef;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) { /* Adjust breakpoint for button wrapping */
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 10px; /* Reduce gap when stacked */
+    }
+    .control-button {
+        min-width: unset; /* Remove min-width to allow full flexibility */
+        width: 100%; /* Ensure they take full width when stacked */
+        max-width: unset; /* Remove max-width constraint */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .app-container {
+        padding: 20px;
+        border-radius: 8px; /* Slightly less rounded on small screens */
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    .nav-tabs {
+        margin-bottom: 20px;
+    }
+    .nav-tab-button {
+        font-size: 0.9em;
+        padding: 10px 12px;
+        margin: 0 1px;
+        border-radius: 6px 6px 0 0;
+    }
+    .display-time {
+        font-size: 1.4em; /* Significantly reduced font size */
+        padding: 10px 25px; /* Keep generous horizontal padding */
+        margin: 15px 0;
+        letter-spacing: 0; /* Ensure no extra letter spacing */
+    }
+    .world-clock-display {
+        font-size: 1.1em; /* Significantly reduced font size */
+        padding: 10px 25px; /* Keep generous horizontal padding */
+        margin: 15px 0 10px;
+        letter-spacing: 0; /* Ensure no extra letter spacing */
+    }
+    .world-clock-location {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    .button-group {
+        gap: 8px; /* Even smaller gap for very narrow screens */
+    }
+    .control-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    .timer-inputs {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .timer-inputs div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .timer-inputs input[type="number"] {
+        width: 70px;
+        padding: 8px;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    #lapList {
+        margin-top: 20px;
+        max-height: 200px;
+        border-radius: 5px;
+    }
+    #lapList li {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+}
