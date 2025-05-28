@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Utilities</title>
+    <link rel="stylesheet" href="time-utilities.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Time Utilities</h1>
+
+        <div class="nav-tabs">
+            <button class="nav-tab-button active" data-tab="stopwatch">Stopwatch</button>
+            <button class="nav-tab-button" data-tab="timer">Timer</button>
+            <button class="nav-tab-button" data-tab="clock">Clock</button>
+        </div>
+
+        <div id="stopwatch" class="tab-content-section active">
+            <div class="display-time" id="stopwatchDisplay">00:00:00.000</div>
+            <div class="button-group">
+                <button class="control-button start" id="stopwatchStart">Start</button>
+                <button class="control-button pause" id="stopwatchPause" style="display:none;">Pause</button>
+                <button class="control-button reset" id="stopwatchReset">Reset</button>
+                <button class="control-button lap" id="stopwatchLap">Lap</button>
+            </div>
+            <ul id="lapList"></ul>
+        </div>
+
+        <div id="timer" class="tab-content-section">
+            <div class="timer-inputs">
+                <div>
+                    <label for="timerMinutes">Minutes:</label>
+                    <input type="number" id="timerMinutes" value="5" min="0" max="99">
+                </div>
+                <div>
+                    <label for="timerSeconds">Seconds:</label>
+                    <input type="number" id="timerSeconds" value="0" min="0" max="59">
+                </div>
+            </div>
+            <div class="display-time" id="timerDisplay">00:05:00</div>
+            <div class="button-group">
+                <button class="control-button start" id="timerStart">Start</button>
+                <button class="control-button pause" id="timerPause" style="display:none;">Pause</button>
+                <button class="control-button reset" id="timerReset">Reset</button>
+            </div>
+            <audio id="timerBeep" src="https://www.soundjay.com/buttons/beep-07.wav" preload="auto"></audio>
+        </div>
+
+        <div id="clock" class="tab-content-section">
+            <div class="world-clock-display" id="clockDisplay"></div>
+            <div class="world-clock-location" id="clockLocation"></div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        &copy; 2025 Aryal & Logistics LLC. All rights reserved.
+    </div>
+
+    <script src="time-utilities.js"></script>
+</body>
+</html>
