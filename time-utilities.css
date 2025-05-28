@@ -99,7 +99,7 @@ h1 {
 /* Display for Time/Stopwatch/Timer */
 .display-time {
     font-family: 'Courier New', monospace; /* Digital font */
-    font-size: 4em; /* Larger time display */
+    font-size: 2em; /* Decreased to half (from 4em) */
     font-weight: bold;
     color: #333;
     margin: 25px 0; /* Increased spacing */
@@ -263,7 +263,7 @@ h1 {
 
 /* World Clock Specific Styles */
 .world-clock-display {
-    font-size: 3.2em; /* Adjusted for better balance */
+    font-size: 1.6em; /* Decreased to half (from 3.2em) */
     font-weight: bold;
     color: #333;
     margin: 25px 0 15px; /* Adjusted margins */
@@ -335,14 +335,14 @@ h1 {
         border-radius: 6px 6px 0 0;
     }
     .display-time {
-        font-size: 1.6em; /* Slightly increased font size from previous attempt */
-        padding: 10px 30px; /* SIGNIFICANTLY INCREASED HORIZONTAL PADDING */
+        font-size: 0.8em; /* Decreased to half (from 1.6em) */
+        padding: 10px 30px; /* Keep generous horizontal padding */
         margin: 15px 0;
         letter-spacing: 0; /* Ensure no extra letter spacing */
     }
     .world-clock-display {
-        font-size: 1.3em; /* Slightly increased font size from previous attempt */
-        padding: 10px 30px; /* SIGNIFICANTLY INCREASED HORIZONTAL PADDING */
+        font-size: 0.65em; /* Decreased to half (from 1.3em) */
+        padding: 10px 30px; /* Keep generous horizontal padding */
         margin: 15px 0 10px;
         letter-spacing: 0; /* Ensure no extra letter spacing */
     }
