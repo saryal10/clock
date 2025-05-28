@@ -99,7 +99,7 @@ h1 {
 /* Display for Time/Stopwatch/Timer */
 .display-time {
     font-family: 'Courier New', monospace; /* Digital font */
-    font-size: 2em; /* Decreased to half (from 4em) */
+    font-size: 3em; /* Decreased to half (from 4em) */
     font-weight: bold;
     color: #333;
     margin: 25px 0; /* Increased spacing */
