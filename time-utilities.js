@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(`Detected browser timezone: ${timezoneString}`);
 
         clockDisplay.textContent = timeString;
-        clockLocation.textContent = `${dateString} | Your Browser's Time Zone: ${timezoneString}`;
+        clockLocation.textContent = `${dateString} | Current Time is: ${timezoneString}`;
     }
 
     function startClock() {
