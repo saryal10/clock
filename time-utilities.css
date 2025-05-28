@@ -99,16 +99,16 @@ h1 {
 /* Display for Time/Stopwatch/Timer */
 .display-time {
     font-family: 'Courier New', monospace; /* Digital font */
-    font-size: 6em; /* Increased by 50% from 4em */
+    font-size: 2em; /* Decreased to half (from 4em) */
     font-weight: bold;
     color: #333;
     margin: 25px 0; /* Increased spacing */
-    padding: 20px 30px; /* Increased horizontal padding */
+    padding: 15px 25px; /* Increased horizontal padding */
     background-color: #e9eff3; /* Softer background for display */
     border-radius: 10px;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.15); /* More defined inset shadow */
     width: 100%;
-    max-width: 500px; /* Slightly wider display */
+    max-width: 480px; /* Slightly wider display */
     box-sizing: border-box;
     text-align: center;
     letter-spacing: 2px; /* Add some spacing for digital look */
@@ -263,16 +263,16 @@ h1 {
 
 /* World Clock Specific Styles */
 .world-clock-display {
-    font-size: 4.8em; /* Increased by 50% from 3.2em */
+    font-size: 1.6em; /* Decreased to half (from 3.2em) */
     font-weight: bold;
     color: #333;
     margin: 25px 0 15px; /* Adjusted margins */
-    padding: 20px 30px; /* Increased horizontal padding */
+    padding: 15px 25px; /* Increased horizontal padding */
     background-color: #e9eff3;
     border-radius: 10px;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
     width: 100%;
-    max-width: 500px; /* Slightly wider display */
+    max-width: 480px; /* Slightly wider display */
     box-sizing: border-box;
     text-align: center;
     letter-spacing: 1px;
@@ -335,14 +335,14 @@ h1 {
         border-radius: 6px 6px 0 0;
     }
     .display-time {
-        font-size: 2.1em; /* Increased by 50% from 1.4em */
-        padding: 15px 30px; /* Generous horizontal padding */
+        font-size: 0.8em; /* Decreased to half (from 1.6em) */
+        padding: 10px 30px; /* Keep generous horizontal padding */
         margin: 15px 0;
         letter-spacing: 0; /* Ensure no extra letter spacing */
     }
     .world-clock-display {
-        font-size: 1.65em; /* Increased by 50% from 1.1em */
-        padding: 15px 30px; /* Generous horizontal padding */
+        font-size: 0.65em; /* Decreased to half (from 1.3em) */
+        padding: 10px 30px; /* Keep generous horizontal padding */
         margin: 15px 0 10px;
         letter-spacing: 0; /* Ensure no extra letter spacing */
     }
