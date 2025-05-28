@@ -111,7 +111,7 @@ h1 {
 /* Display for Time/Stopwatch/Timer - Kept digital look, but ensures visibility */
 .display-time {
     font-family: 'Courier New', monospace; /* Digital font */
-    font-size: 4em; /* Increased by 50% from previous 4em */
+    font-size: 3em; /* Increased by 50% from previous 4em */
     font-weight: bold;
     color: #333;
     margin: 25px 0;
