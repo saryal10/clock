@@ -227,8 +227,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const dateString = now.toLocaleDateString(undefined, dateOptions);
         const timezoneString = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
+        // Log the detected timezone to the console for debugging
+        console.log(`Detected browser timezone: ${timezoneString}`);
+
         clockDisplay.textContent = timeString;
-        clockLocation.textContent = `${dateString} | ${timezoneString}`;
+        clockLocation.textContent = `${dateString} | Your Browser's Time Zone: ${timezoneString}`;
     }
 
     function startClock() {
